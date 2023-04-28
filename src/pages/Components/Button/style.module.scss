@@ -1,0 +1,15 @@
+.wrapper{
+  margin-top: 30px;
+  width: 364px;
+  button{
+    height: 3.5rem;
+    background-color: #008efa;
+    border: none;
+    border-radius: var(--radius-12);
+    color: white;
+    font-size: 16px ;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+  }
+}

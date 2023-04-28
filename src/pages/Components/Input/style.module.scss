@@ -9,8 +9,12 @@
   background-color: white;
   display: flex;
   align-items: center;
-  transition: var(--transition-easeOut-2);
-  border: 1px solid rgb(226, 229, 240);
+  transition: all 0.2s ease-out;
+  border: 2px solid rgb(226, 229, 240);
+  overflow: hidden;
+  &:hover{
+    border: 2px solid #008efa;
+  }
   .icon{
     font-size: 24px;
     color: #999999;
@@ -21,8 +25,12 @@
     margin-left: 15px;
     font-size: 18px;
     line-height: 18px;
+    width: 100%;
+
   }
   input:focus{
     outline: none;
+
   }
+
 }

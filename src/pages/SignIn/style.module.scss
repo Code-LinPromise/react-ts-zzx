@@ -41,12 +41,35 @@
       box-shadow: var(--shadow-3);
       transition: all .35s ease-out;
       transform: scale(.98) translateX(0);
-      padding: 30px 50px;
+      padding: 50px 30px 50px 60px;
 
       >h1{
         font-size: 2.5rem;
         line-height: 2.5rem;
         font-weight: 600;
+      }
+      .code{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 364px;
+      }
+      .remember{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        input:hover{
+          cursor: pointer;
+        }
+        label{
+          margin-left: 10px;
+        }
+      }
+      .details{
+        margin-top: 30px;
+        text-align: center;
+        color: rgba(35, 48, 65, 0.7);
+        font-size: 14px;
       }
     }
   }
