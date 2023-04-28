@@ -1,0 +1,28 @@
+.wrapper{
+  margin-top: 30px;
+  box-sizing: content-box;
+  position: relative;
+  width: 346px;
+  height: 42px;
+  padding: 6px;
+  border-radius: var(--radius-12);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  transition: var(--transition-easeOut-2);
+  border: 1px solid rgb(226, 229, 240);
+  .icon{
+    font-size: 24px;
+    color: #999999;
+    margin-left: 15px;
+  }
+  input{
+    border: none;
+    margin-left: 15px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  input:focus{
+    outline: none;
+  }
+}

@@ -1,0 +1,53 @@
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >.loginImage{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+  }
+  >.context{
+    z-index: 1;
+    width: 85vw;
+    min-width: 1180px;
+    display: flex;
+    justify-content: space-around;
+    >.title{
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      align-items: center;
+      p{
+        font-size: 2.571rem;
+        font-weight: 500;
+        margin-bottom: 24px;
+        line-height: 1.4;
+        color: white;
+      }
+    }
+    >.login{
+      width: 40%;
+      z-index: 1;
+      overflow: hidden;
+      position: relative;
+      border-radius: var(--radius-24);
+      background: #fff;
+      box-shadow: var(--shadow-3);
+      transition: all .35s ease-out;
+      transform: scale(.98) translateX(0);
+      padding: 30px 50px;
+
+      >h1{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

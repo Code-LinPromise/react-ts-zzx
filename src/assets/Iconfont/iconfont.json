@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "34453208",
+      "name": "email",
+      "font_class": "email",
+      "unicode": "e856",
+      "unicode_decimal": 59478
+    }
+  ]
+}
