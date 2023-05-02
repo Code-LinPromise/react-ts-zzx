@@ -1,22 +1,39 @@
 import {
-    createBrowserRouter,
+    createBrowserRouter,Navigate
 } from "react-router-dom";
 import Home from "../pages/Home";
 import User from "../pages/User";
 import SignIn from "../pages/SignIn";
+import Direction from "../pages/Direction"
+import MainPage from "../pages/MainPage";
 
 export const router = createBrowserRouter([
     {
-      path: "/",
-      element:<Home/>,
+        path: "/",
+        element:(<Navigate to="/main"/>)
     },
     {
-      path: "/user",
-      element: <User/>,
+        path: "/",
+        element:<Home/>,
+        children:[
+            {
+                path:"main",
+                element:<MainPage/>
+            },
+            {
+                path:"direction",
+                element:<Direction/>
+            }
+        ]
     },
-  {
-    path:"/sign_in",
-    element:<SignIn/>
-  }
+    {
+        path: "/user",
+        element: <User/>,
+    },
+    {
+        path:"/sign_in",
+        element:<SignIn/>
+    },
+
 ]);
 

@@ -1,0 +1,108 @@
+.SearchMain{
+  width: 100vw;
+  height: 400px;
+  background-size: 100%  400px;
+  position: relative;
+  .SearchMain-Toggle{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    .Toggle-Top{
+      display: flex;
+      .Toggle{
+        list-style: none;
+        color: var(--text-color);
+        font-size: 18px;
+        padding-bottom: 5px;
+        margin: 0 30px;
+        user-select: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        position: relative;
+      }
+      #active{
+        color: var(--search-select-color);
+      }
+      .Toggle:hover{
+        color: var(--search-select-color);
+      }
+      .Toggle-usually:after, .Toggle-search:after, .Toggle-toggle:after,
+      .Toggle-community:after, .Toggle-life:after, .Toggle-work:after{
+        content: '';
+        height:6px;
+        width: 6px;
+        border-radius: 50%;
+        position:absolute;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: var(--search-scroll-color);
+        transition: .3s;
+        opacity: 0;
+      }
+      #active:after{
+        opacity: 0;
+      }
+      .Toggle:hover:after{
+        opacity: 1;
+      }
+    }
+    .Toggle-scroll{
+      display: inline-block;
+      width: 50px;
+      height: 8px;
+      background-color: var(--search-scroll-color);
+      border-radius: 5px;
+      position: absolute;
+      top: 30px;
+      left: 100%;
+      translate: -15%;
+      transition: all 0.3s;
+    }
+  }
+  .Toggle-From{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    height: 70px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 80px;
+    .Toggle-input{
+      width: 1200px;
+      height:70px;
+      border: none;
+      border-radius: 18px;
+      background-color:var(--search-bg-color);
+      color: var(--text-color);
+      font-size: 18px;
+      padding-left: 20px;
+    }
+    .Toggle-input::placeholder{
+      color: var(--search-placeholder-color);
+    }
+    .Input-Submit{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      right: 30px;
+      background-color:var(--search-bg-color);
+      border: none;
+      .Input-sousuo{
+        z-index: 10;
+        color: var(--text-color);
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+
+  }
+  .Toggle-Bottom{
+
+
+  }
+
+
+}

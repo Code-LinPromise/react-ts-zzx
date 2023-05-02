@@ -1,0 +1,24 @@
+
+.SearchBottomItem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .Toggle-bottom-item{
+    list-style: none;
+    color: var(--text-color);
+    font-size: 18px;
+    padding-bottom: 5px;
+    margin: 0 30px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+  }
+
+  .Toggle-bottom-item:hover{
+    color: var(--search-select-color);
+  }
+  .Toggle-bottom-item-active{
+    color: var(--search-select-color);
+  }
+}

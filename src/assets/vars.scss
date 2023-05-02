@@ -16,6 +16,10 @@
   --body-text-color:rgba(60, 60, 67, .92);
   --card-bg-color:#f6f6f7;
   --card-border-color:#f6f6f7;
+  --search-bg-color:#e3e3e5;
+  --search-placeholder-color:black;
+  --search-scroll-color:#000000;
+  --search-select-color:black;
 }
 
 :root .dark{
@@ -33,4 +37,8 @@
   --body-text-color: rgba(255, 255, 245, .86);
   --card-bg-color:#252529;
   --card-border-color:#252529;
+  --search-bg-color:#000000;
+  --search-scroll-color:white;
+  --search-placeholder-color:#999999;
+  --search-select-color:white;
 }
