@@ -1,0 +1,30 @@
+.wrapper{
+
+  .InfoList{
+    display: flex;
+    padding: 0 150px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+    >li{
+      width: 32%;
+      margin-top: 20px;
+    }
+  }
+  .footer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    >img{
+      height: 34px;
+    }
+    >p{
+      color: var(--text-color);
+      margin-top: 15px;
+    }
+  }
+}

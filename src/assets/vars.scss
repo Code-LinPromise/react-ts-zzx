@@ -7,6 +7,15 @@
   --menu-border-color:rgba(60, 60, 67, .29);
   --icon-bg-color:white;
   --body-bg-color:#ffffff;
+  --title-bg-become-color:linear-gradient( 120deg, #bd34fe 30%, #41d1ff );
+  --button-bg-color:#646cff;
+  --logo-bg-color:linear-gradient( -45deg, #bd34fe 50%, #47caff 50% );
+  --logo-img-filter:blur(72px);
+  --emoji-bg-color:#e3e3e5;
+  --card-details-color:rgba(60, 60, 67, .7);
+  --body-text-color:rgba(60, 60, 67, .92);
+  --card-bg-color:#f6f6f7;
+  --card-border-color:#f6f6f7;
 }
 
 :root .dark{
@@ -15,4 +24,13 @@
   --menu-border-color:rgba(82, 82, 89, .68);
   --icon-bg-color:black;
   --body-bg-color:#121212;
+  --title-bg-become-color:linear-gradient( 120deg, #bd34fe 30%, #41d1ff );
+  --button-bg-color:#646cff;
+  --logo-bg-color:linear-gradient( -45deg, #bd34fe 50%, #47caff 50% );
+  --logo-img-filter:blur(72px);
+  --emoji-bg-color:#1e1e20;
+  --card-details-color:rgba(235, 235, 245, .6);
+  --body-text-color: rgba(255, 255, 245, .86);
+  --card-bg-color:#252529;
+  --card-border-color:#252529;
 }

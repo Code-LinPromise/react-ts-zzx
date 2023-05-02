@@ -1,0 +1,17 @@
+.wrapper{
+  border-radius: 20px;
+  padding: 0 20px;
+  line-height: 38px;
+  font-size: 14px;
+  display: inline-block;
+  border: 1px solid transparent;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.25s;
+  cursor: pointer;
+  margin-right:20px ;
+  &:hover{
+    opacity: 0.8;
+  }
+}

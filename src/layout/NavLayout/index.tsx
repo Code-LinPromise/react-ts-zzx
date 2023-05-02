@@ -1,13 +1,28 @@
 import React, {useEffect, useState} from 'react';
 import  s from "./style.module.scss"
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo.svg"
 
 const NavLayout = () => {
     const [iconName,setIconName]=useState("icon-taiyang")
     useEffect(()=>{
         const theme=localStorage.getItem("theme")
+        const body =document.querySelector("body")
+        const block:HTMLDivElement |null=document.querySelector("#block")
         if(theme===null){
             localStorage.setItem("theme","light")
+            return
+        }
+        if(body!==null){
+            if(block!=null && theme==="light"){
+                block.style.left="0%"
+                setIconName("icon-taiyang")
+                body.className=theme
+            }
+            if(block!=null && theme==="dark"){
+                block.style.left="50%"
+                setIconName("icon-yueliang")
+                body.className=theme
+            }
         }
     },[])
     const shiftTheme=()=>{

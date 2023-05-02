@@ -1,0 +1,72 @@
+.wrapper{
+  display: flex;
+  margin-top: 40px;
+  padding:20px 150px;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  .title{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    >.name{
+      line-height: 64px;
+      font-size: 56px;
+      font-weight: 700;
+      background: var(--title-bg-become-color);
+      -webkit-background-clip: text;color: transparent;
+    }
+    >.details{
+      line-height: 64px;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+    >.titleAndVersion{
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      .copilotTitle{
+        line-height: 36px;
+        font-size: 24px;
+        color: var(--text-color);
+
+      }
+      .version{
+        background-color: #646cff;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 4px 6px;
+        margin-left: 6px;
+        color: #fff;
+        border-radius: 10px;
+        vertical-align: middle;
+      }
+    }
+    >.buttons{
+      margin-top: 20px;
+    }
+  }
+  .contain{
+    position: relative;
+    margin: 0 auto;
+    .logo{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%,-50%);
+      background-image: var(--logo-bg-color);
+      filter:var(--logo-img-filter);
+      width: 400px;
+      height: 400px;
+    }
+    img{
+      width: 320px;
+      height: 320px;
+      z-index: 10;
+      position: relative;
+    }
+  }
+
+}
