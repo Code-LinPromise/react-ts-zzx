@@ -6,6 +6,7 @@ import Button from "../Components/Button";
 import {http} from "../../http";
 import { message } from 'antd';
 import {flushSync} from "react-dom";
+import {AxiosResponse} from "axios";
 
 const SignIn = () => {
     const [count,setCount]=useState(3)
@@ -38,6 +39,12 @@ const SignIn = () => {
             content: '登录成功！',
         });
     };
+    const errorLogin = () => {
+        messageLogin.open({
+            type: 'error',
+            content: '验证码错误',
+        });
+    };
     useEffect(()=>{
         let id=setInterval(()=>{
             if(count<=1){
@@ -51,11 +58,15 @@ const SignIn = () => {
     },[count])
     const onSubmit=async (e: { preventDefault: () => void; })=>{
         e.preventDefault()
-        await  http.post("/user/sign_in",{
+        await http.post("/user/sign_in",{
             email:formData.email,
             code:formData.code
-        }).then((res)=>{
+        }).then((res:AxiosResponse)=>{
+            console.log(res.data.status)
             successLogin()
+
+        }).catch((error)=>{
+            errorLogin()
         })
         if(remember.current===null){
             return
