@@ -2,7 +2,6 @@ import React from 'react';
 import MainTitle from "../Components/MainTitle";
 import s from "./style.module.scss";
 import InterviewCard from "../Components/InterviewCard";
-import heart from "../../assets/images/heart.svg";
 
 type CardInfo={
     emoji:string,
@@ -59,10 +58,7 @@ const MainPage = () => {
                     })
                 }
             </ul>
-            <div className={s.footer}>
-                <img src={heart} alt=""/>
-                <p>本网站由xxx团队维护并运行，感谢您的关注和使用</p>
-            </div>
+
         </div>
     );
 };

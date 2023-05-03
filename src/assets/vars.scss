@@ -6,7 +6,7 @@
   --menu-bg-color:#f6f6f7;
   --menu-border-color:rgba(60, 60, 67, .29);
   --icon-bg-color:white;
-  --body-bg-color:#ffffff;
+  --body-bg-color:#f3f7fd;
   --title-bg-become-color:linear-gradient( 120deg, #bd34fe 30%, #41d1ff );
   --button-bg-color:#646cff;
   --logo-bg-color:linear-gradient( -45deg, #bd34fe 50%, #47caff 50% );
@@ -20,13 +20,16 @@
   --search-placeholder-color:black;
   --search-scroll-color:#000000;
   --search-select-color:black;
+  --kind-card-top-bg-color:#edf7f6;
+  --kind-card-main-bg-color:#edf7f6;
+  --kind-card-border-color:#2ec4b6;
+  --kind-text-bg-color:linear-gradient( -45deg, #464545 50%, #1b1b1b 50% );
 }
 
 :root .dark{
   --radius-24: 1.71429rem;
   --radius-12: 0.857143rem;
   --shadow-3: rgba(23,25,29,0.2) 0px 16px 16px -16px,rgba(23,25,29,0.03) 0px 14px 20px 0px,rgba(23,25,29,0.04) 0px 0px 0px 1px;
-  --text-color:rgba(60, 60, 67, .92);
   --text-color:rgba(255, 255, 245, .86);
   --menu-bg-color:#313136;
   --menu-border-color:rgba(82, 82, 89, .68);
@@ -46,4 +49,7 @@
   --search-placeholder-color:#999999;
   --search-select-color:white;
   --kind-card-top-bg-color:#1a1a1a;
+  --kind-card-main-bg-color:#252529;
+  --kind-card-border-color:#10bbce;
+  --kind-text-bg-color:linear-gradient( -45deg, #6eeb83 50%, #1be7ff 50% );
 }

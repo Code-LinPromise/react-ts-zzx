@@ -1,0 +1,15 @@
+.footer{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding-bottom: 50px;
+  >img{
+    height: 34px;
+  }
+  >p{
+    color: var(--text-color);
+    margin-top: 15px;
+  }
+}

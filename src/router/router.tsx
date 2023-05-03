@@ -6,7 +6,9 @@ import User from "../pages/User";
 import SignIn from "../pages/SignIn";
 import Direction from "../pages/Direction"
 import MainPage from "../pages/MainPage";
-
+import AiPage from "../pages/Aipage";
+import AppPage from "../pages/AppPage";
+import StudyPage from "../pages/StudyPage";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -23,7 +25,19 @@ export const router = createBrowserRouter([
             {
                 path:"direction",
                 element:<Direction/>
-            }
+            },
+            {
+                path:"study",
+                element:<StudyPage/>
+            },
+            {
+                path:"app",
+                element:<AppPage/>
+            },
+            {
+                path:"ai",
+                element:<AiPage/>
+            },
         ]
     },
     {

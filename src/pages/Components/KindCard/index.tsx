@@ -1,12 +1,14 @@
 import React from 'react';
 import s from "./style.module.scss"
+import trueIcon from "../../../assets/images/对勾.svg"
 
 type Props={
     iconSrc:string,
     title:string,
     details:string,
     buttonTitle:string,
-    infoList:string[]
+    infoList:string[],
+    ClickEvent:()=>void
 }
 const KindCard = (props:Props) => {
     return (
@@ -16,13 +18,15 @@ const KindCard = (props:Props) => {
             </div>
             <strong className={s.title}>{props.title}</strong>
             <h2 className={s.details}>{props.details}</h2>
-            <button className={s.button}>{props.buttonTitle}</button>
+            <button className={s.button} onClick={props?.ClickEvent}>{props.buttonTitle}</button>
             <ul className={s.infoList}>
                 {
                     props.infoList.map((item,index)=>{
-                        return <li key={index}>
+                        return <div className={s.font}>
+                            <img src={trueIcon} alt=""/>
+                            <li key={index}>
                             {item}
-                        </li>
+                        </li></div>
                     })
                 }
             </ul>
