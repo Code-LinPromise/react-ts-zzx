@@ -1,0 +1,60 @@
+.wrapper{
+  padding: 2.5rem;
+  position: relative;
+  border: 2px solid #10bbce;
+  border-radius: 1.5rem;
+  background-color: #252529;
+  display: flex;
+  flex-flow: column;
+  .topRadio{
+    background-color: var(--kind-card-top-bg-color);
+    padding: 0.25rem;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    border: 4px solid #10bbce;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    img{
+      height: 4.5rem;
+      width: auto;
+    }
+  }
+  .title{
+    font-size: 18px;
+    margin-top: 35px;
+  }
+  .details{
+    font-size: 20px;
+    margin-top: 35px;
+  }
+  .button{
+    background-color: #3fb887;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 35px;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+   &:hover{
+     background: linear-gradient(45deg,#42b883,#0ebbd2)
+   }
+  }
+  .infoList{
+    margin-top: 35px;
+    display: flex;
+    flex-flow: column;
+    padding-left: 0;
+    li{
+      margin-bottom: 15px;
+      color: #e5e7eb;
+    }
+  }
+}

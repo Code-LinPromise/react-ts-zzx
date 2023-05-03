@@ -2,10 +2,23 @@ import React, {useEffect, useState} from 'react';
 import  s from "./style.module.scss"
 import logo from "../../assets/images/logo.svg"
 import {randomNum} from "../../utils/RandomFunction";
+import DiyButton from "../../pages/Components/DiyButton";
+import {useNavigate} from "react-router-dom";
+import {http} from "../../http";
+import {Popconfirm} from "antd";
+import {message} from "antd/lib";
 
 const NavLayout = () => {
+    const navigate=useNavigate()
     const [iconName,setIconName]=useState("icon-taiyang")
     const [randomFont,setRandomFont]=useState("")
+    const [userName,setUserName]=useState("")
+    useEffect(()=>{
+        const email:string |null=sessionStorage.getItem("email")
+        if(email!=null){
+            setUserName(email)
+        }
+    },[])
     const FontArray=[
         "人不光是靠他生来就拥有一切，而是靠他从学习中所得到的一切来造就自己。",
         "生命在闪耀中现出绚烂，在平凡中现出真实。",
@@ -87,23 +100,46 @@ const NavLayout = () => {
         script.setAttribute('src', "https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0")
         document.body.append(script)
     },[])
+    function login(){
+        navigate("/sign_in")
+    }
+    const confirm = () => {
+        message.success('退出成功！').then(()=>{
+            setUserName("")
+            sessionStorage.removeItem("email")
+        });
+    };
+
+    const cancel = () => {
+        message.error('取消退出登录！');
+    };
     return (
         <div className={s.wrapper}>
             <div className={s.top}>
                 <img src={logo} alt=""/>
                 <span>XXX校园导航</span>
                 <div className={s.widget}>
-                    <div id="he-plugin-simple" ></div>
+                    <div id="he-plugin-simple" > </div>
                 </div>
             </div>
             <div className={s.right}>
                 <strong>{randomFont}</strong>
                 <div className={s.shift} onClick={shiftTheme} >
                     <div className={s.icon} id="block">
-                        <span className={["iconfont",iconName,s.iconStyle].join(" ")}></span>
+                        <span className={["iconfont",iconName,s.iconStyle].join(" ")}> </span>
                     </div>
                 </div>
-                <span className={s.version}>Version</span>
+                <div className={s.version}>{userName?<Popconfirm
+                        title="确定要退出登录？"
+                        onConfirm={confirm}
+                        onCancel={cancel}
+                        okText="Yes"
+                        cancelText="No"
+                    >
+                    {userName}
+                    </Popconfirm>
+
+                    :<DiyButton context={"登录"} bgColor={"#646cff"} color={"#FFF"} ClickEvent={login}/>}</div>
             </div>
         </div>
     );

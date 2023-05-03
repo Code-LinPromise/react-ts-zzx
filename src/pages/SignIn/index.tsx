@@ -7,8 +7,10 @@ import {http} from "../../http";
 import { message } from 'antd';
 import {flushSync} from "react-dom";
 import {AxiosResponse} from "axios";
+import {useNavigate} from "react-router-dom";
 
 const SignIn = () => {
+    const navigate=useNavigate()
     const [count,setCount]=useState(3)
     const [isCool,setIsCool]=useState(false)
     const [formData,setFormData]=useState({
@@ -62,8 +64,11 @@ const SignIn = () => {
             email:formData.email,
             code:formData.code
         }).then((res:AxiosResponse)=>{
-            console.log(res.data.status)
             successLogin()
+            sessionStorage.setItem("email",formData.email)
+            setTimeout(()=>{
+                navigate("/main")
+            },1000)
 
         }).catch((error)=>{
             errorLogin()
