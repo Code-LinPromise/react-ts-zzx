@@ -113,11 +113,16 @@ const NavLayout = () => {
     const cancel = () => {
         message.error('取消退出登录！');
     };
+    function goMainPage(){
+        navigate("main")
+    }
     return (
         <div className={s.wrapper}>
             <div className={s.top}>
-                <img src={logo} alt=""/>
-                <span>XXX校园导航</span>
+                <div className={s.back} onClick={goMainPage}>
+                    <img src={logo} alt=""/>
+                    <span>XXX校园导航</span>
+                </div>
                 <div className={s.widget}>
                     <div id="he-plugin-simple" > </div>
                 </div>

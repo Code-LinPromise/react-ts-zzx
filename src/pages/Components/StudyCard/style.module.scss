@@ -1,0 +1,27 @@
+.wrapper{
+  display: flex;
+  flex-flow: column;
+  padding: 50px 150px;
+  .title{
+    display: flex;
+    align-items: center;
+    .text{
+      margin-left: 20px;
+    }
+    .icon{
+      font-size: 16px;
+    }
+  }
+  .infoList{
+    margin-top: 30px;
+    display: flex;
+    justify-content:start;
+    flex-wrap: wrap;
+    >.item{
+      margin-top: 15px;
+      margin-left: 20px;
+      margin-right: 20px;
+      width: 20%;
+    }
+  }
+}

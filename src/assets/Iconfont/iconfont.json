@@ -27,6 +27,13 @@
       "unicode_decimal": 59146
     },
     {
+      "icon_id": "6966137",
+      "name": "资源",
+      "font_class": "ziyuan",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
       "icon_id": "34453208",
       "name": "email",
       "font_class": "email",
