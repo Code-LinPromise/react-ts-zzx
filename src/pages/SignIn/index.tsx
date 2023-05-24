@@ -5,7 +5,6 @@ import Input from "../Components/Input";
 import Button from "../Components/Button";
 import {http} from "../../http";
 import { message } from 'antd';
-import {flushSync} from "react-dom";
 import {AxiosResponse} from "axios";
 import {useNavigate} from "react-router-dom";
 
@@ -58,14 +57,16 @@ const SignIn = () => {
         },1000)
         return ()=>{clearInterval(id)}
     },[count])
+
     const onSubmit=async (e: { preventDefault: () => void; })=>{
         e.preventDefault()
         await http.post("/user/sign_in",{
             email:formData.email,
             code:formData.code
         }).then((res:AxiosResponse)=>{
+            console.log(res)
             successLogin()
-            sessionStorage.setItem("email",formData.email)
+            localStorage.setItem("jwt_token",res.data.access_token)
             setTimeout(()=>{
                 navigate("/main")
             },1000)
@@ -85,6 +86,7 @@ const SignIn = () => {
     }
     const  getValidationCode=async ()=>{
         setIsCool(true)
+        console.log("发送验证码")
         await http.post("/validation-code",{
             email:formData.email
         }).then((res)=>{

@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import "./style.scss"
 import SearchBottomItem from "./SearchBottomItem";
+import Logo from "../../../assets/images/logo.svg"
 
 const SearchMain = () => {
     const [inputDetails,setInputDetails]=useState("")
@@ -90,6 +91,10 @@ const SearchMain = () => {
     }
     return (
         <div className="SearchMain">
+            <div className='wrapper'>
+                <img src={Logo} alt="" />
+                <h1>站内搜索引擎助手</h1>
+            </div>
            <div className="SearchMain-Toggle">
                <ul className="Toggle-Top">
                    <li className="Toggle-usually Toggle" id="active" >常用</li>

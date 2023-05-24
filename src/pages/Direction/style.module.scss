@@ -1,5 +1,6 @@
 .wrapper{
-  padding: 150px;
+  padding: 0 150px;
+  margin-bottom: 135px;
   .bgBecome{
     background-image: var(--logo-bg-color);
     filter:var(--logo-img-filter);
@@ -12,6 +13,7 @@
     height: 30vh;
   }
   .kindCard{
+    margin-top: 350px;
     position: relative;
     .cardBgColor{
       position: absolute;

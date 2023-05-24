@@ -1,4 +1,5 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
+import { useAccessToken } from './store/useAccessToken'
 type GetConfig = Omit<AxiosRequestConfig, 'params' | 'url' | 'method'>
 type PostConfig = Omit<AxiosRequestConfig, 'url' | 'data' | 'method'>
 type PatchConfig = Omit<AxiosRequestConfig, 'url' | 'data'>
@@ -14,6 +15,7 @@ type JSONValue =
     | JSONValue[]
     | Record<string, JSONValue>;
 
+   
 export class Http {
     instance: AxiosInstance
     constructor(baseURL: string) {
@@ -33,6 +35,15 @@ export class Http {
     delete<R = unknown>(url: string, query?: Record<string, string>, config?: DeleteConfig) {
         return this.instance.request<R>({ ...config, url: url, params: query, method: 'delete' })
     }
+
+    
 }
 
 export const http = new Http("http://127.0.0.1:3000/")
+http.instance.interceptors.request.use((config) => { 
+    const jwt_token = localStorage.getItem('jwt_token')
+    if (jwt_token) {
+      config.headers!.Authorization = `Bearer ${jwt_token}`
+    }
+    return config
+  })
